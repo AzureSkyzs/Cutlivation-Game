@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=3 uid="uid://dyot0585btqrw"]
+
+[ext_resource type="Material" path="res://Textures/DarkGrid.tres" id="1"]
+[ext_resource type="PackedScene" uid="uid://yagp7vvooty6" path="res://body.tscn" id="2_pgdpy"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_flahx"]
+sky_top_color = Color(0.854902, 0.882353, 0.917647, 1)
+sky_horizon_color = Color(0.466667, 0.772549, 1, 1)
+sky_curve = 0.454713
+
+[sub_resource type="Sky" id="Sky_xx5gt"]
+sky_material = SubResource("ProceduralSkyMaterial_flahx")
+
+[sub_resource type="Environment" id="Environment_877dx"]
+background_mode = 2
+sky = SubResource("Sky_xx5gt")
+
+[node name="Room" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0120265, -0.00863695, 0.0103092)
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(2.5, 0, 0, 0, 1.5, 0, 0, 0, 2.5, 0, 3, 0)
+size = Vector3(10, 6, 10)
+material = ExtResource("1")
+
+[node name="CSGBox2" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(2.5, 0, 0, 0, 1.5, 0, 0, 0, 2.5, 0, 3.5, 0)
+operation = 2
+size = Vector3(9.56835, 6, 9.60062)
+material = ExtResource("1")
+
+[node name="Body" parent="." instance=ExtResource("2_pgdpy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00183964, 1.42798, -0.00481796)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.38723, 0.377976)
+light_energy = 2.939
+omni_range = 4096.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_877dx")

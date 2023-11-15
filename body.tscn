@@ -1,0 +1,126 @@
+[gd_scene load_steps=6 format=3 uid="uid://yagp7vvooty6"]
+
+[ext_resource type="Script" path="res://body.gd" id="1_65n3f"]
+[ext_resource type="FontFile" uid="uid://bum28ag2s87d0" path="res://ARIAL.TTF" id="2_ffv74"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_77fki"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_k1xof"]
+
+[sub_resource type="Theme" id="Theme_gu7y5"]
+default_font = ExtResource("2_ffv74")
+default_font_size = 25
+
+[node name="Body" type="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00183964, 1, -0.00481796)
+script = ExtResource("1_65n3f")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_77fki")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D"]
+mesh = SubResource("CapsuleMesh_k1xof")
+skeleton = NodePath("../..")
+
+[node name="Head" type="Node3D" parent="."]
+
+[node name="First-Person" type="Camera3D" parent="Head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.518384, -0.0892591)
+current = true
+
+[node name="Cultivation Overlay" type="Control" parent="Head/First-Person"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Qi label" type="RichTextLabel" parent="Head/First-Person/Cultivation Overlay"]
+top_level = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0126597
+anchor_top = 0.831877
+anchor_right = 0.0496597
+anchor_bottom = 0.882877
+offset_left = 0.416002
+offset_top = -0.0560303
+offset_right = -0.207996
+offset_bottom = -0.104004
+grow_vertical = 0
+theme = SubResource("Theme_gu7y5")
+text = "Qi:"
+metadata/_edit_use_anchors_ = true
+metadata/_edit_group_ = true
+
+[node name="Qi Num" type="RichTextLabel" parent="Head/First-Person/Cultivation Overlay"]
+top_level = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0450947
+anchor_top = 0.833
+anchor_right = 0.221602
+anchor_bottom = 0.884
+offset_left = 0.0508804
+offset_top = 0.215942
+offset_right = -0.28511
+offset_bottom = 0.167908
+grow_vertical = 0
+theme = SubResource("Theme_gu7y5")
+text = "0 / 0"
+metadata/_edit_use_anchors_ = true
+metadata/_edit_group_ = true
+
+[node name="Realm Label" type="RichTextLabel" parent="Head/First-Person/Cultivation Overlay"]
+top_level = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0117917
+anchor_top = 0.760889
+anchor_right = 0.0826458
+anchor_bottom = 0.811889
+offset_left = 0.416002
+offset_top = -0.0560303
+offset_right = -0.207996
+offset_bottom = -0.104004
+grow_vertical = 0
+theme = SubResource("Theme_gu7y5")
+text = "Realm:"
+metadata/_edit_use_anchors_ = true
+
+[node name="Realm text" type="RichTextLabel" parent="Head/First-Person/Cultivation Overlay"]
+top_level = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0847083
+anchor_top = 0.760889
+anchor_right = 0.286639
+anchor_bottom = 0.811889
+offset_left = 0.416002
+offset_top = -0.0560303
+offset_right = -0.207996
+offset_bottom = -0.104004
+grow_vertical = 0
+theme = SubResource("Theme_gu7y5")
+text = "N/A
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="Head/First-Person/Cultivation Overlay"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.008
+anchor_top = 0.738
+anchor_right = 0.292569
+anchor_bottom = 0.901
+offset_left = -0.216001
+offset_top = -0.22403
+offset_right = -0.0400085
+offset_bottom = 0.151978
+color = Color(0.262745, 0.262745, 0.262745, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Third-Person" type="Camera3D" parent="Head"]
+transform = Transform3D(1, 0, 0, 0, 0.904105, 0.427311, 0, -0.427311, 0.904105, 0, 2.29007, 2.58413)

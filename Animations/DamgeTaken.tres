@@ -1,0 +1,39 @@
+[gd_resource type="Animation" load_steps=5 format=3 uid="uid://b7msp22r6tjgw"]
+
+[ext_resource type="Material" path="res://Textures/EnemyAnimation.tres" id="1"]
+[ext_resource type="Material" path="res://Textures/EnemyColer.tres" id="2"]
+
+[sub_resource type="StandardMaterial3D" id="1"]
+albedo_color = Color(1, 0.392157, 0.392157, 1)
+
+[sub_resource type="StandardMaterial3D" id="2"]
+albedo_color = Color(1, 0.588235, 0.588235, 1)
+
+[resource]
+resource_name = "DamgeTaken"
+length = 0.2
+step = 20.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HeadMesh:material/0")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("2"), ExtResource("1"), SubResource("1"), SubResource("2"), ExtResource("2")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BodyMesh:material/0")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("2"), ExtResource("1"), SubResource("1"), SubResource("2"), ExtResource("2")]
+}

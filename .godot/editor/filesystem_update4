@@ -1,0 +1,9 @@
+res://default_env.tres
+res://FpsBody.tscn
+res://Animations/DamgeTaken.tres
+res://FpsBodyContoller.gd
+res://Main.tscn
+res://BasicBody.tscn
+res://Room.tscn
+res://body.tscn
+res://body.gd

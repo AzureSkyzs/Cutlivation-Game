@@ -1,0 +1,8 @@
+ColorRect
+Control
+RichTextLabel
+Container
+Camera3D
+WorldEnvironment
+OmniLight3D
+Node3D

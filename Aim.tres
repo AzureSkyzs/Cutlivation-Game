@@ -1,0 +1,29 @@
+[gd_resource type="Animation" format=2]
+
+[resource]
+resource_name = "Aim"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("../Smg:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PackedFloat32Array( 0, 0.2, 0.4 ),
+"transitions": PackedFloat32Array( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0.924, -0.941, -1.277 ), Vector3( 0.529, -0.941, -1.044 ), Vector3( 0, -0.797, -0.781 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../PistolType3:translation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PackedFloat32Array( 0, 0.2, 0.4 ),
+"transitions": PackedFloat32Array( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, -1.425, -0.937 ), Vector3( 0.697, -1.472, -1.344 ), Vector3( 1.09234, -1.47217, -1.51595 ) ]
+}
