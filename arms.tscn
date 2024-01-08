@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqvrrgvccs4mg"]
+
+[ext_resource type="PackedScene" uid="uid://bkergeoljaeih" path="res://Arms.glb" id="1_011n0"]
+
+[node name="Arms" instance=ExtResource("1_011n0")]
+transform = Transform3D(-5.24537e-09, 0, 0.12, 0, 0.12, 0, -0.12, 0, -5.24537e-09, 0, 0, 0)
+
+[node name="Skeleton3D" parent="Armature" index="0"]
+bones/1/position = Vector3(-0.076384, 0.613702, 0.0557174)
+bones/1/rotation = Quaternion(0.278639, 0.220663, 0.712902, 0.604515)
+bones/2/rotation = Quaternion(0.239923, 0.0579803, -0.895366, 0.370667)
+bones/3/position = Vector3(-0.0777881, 0.599106, -0.0552423)
+bones/3/rotation = Quaternion(-0.305046, -0.257785, 0.68973, 0.603958)

@@ -1,0 +1,60 @@
+[gd_scene load_steps=4 format=3 uid="uid://bwj38tdmy86un"]
+
+[ext_resource type="Script" path="res://pause_menu.gd" id="1_a2qx2"]
+[ext_resource type="FontFile" uid="uid://bum28ag2s87d0" path="res://ARIAL.TTF" id="1_kcw8a"]
+
+[sub_resource type="Theme" id="Theme_7xr0a"]
+default_font = ExtResource("1_kcw8a")
+default_font_size = 25
+
+[node name="PauseMenu" type="Control"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_a2qx2")
+metadata/_edit_use_anchors_ = true
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -526.0
+offset_bottom = -296.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.84, 1.84)
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Resume" type="Button" parent="CenterContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_7xr0a")
+text = "Resume"
+
+[node name="Options" type="Button" parent="CenterContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_7xr0a")
+text = "Options"
+
+[node name="Cheats" type="Button" parent="CenterContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_7xr0a")
+text = "Cheats"
+
+[node name="Quit" type="Button" parent="CenterContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_7xr0a")
+text = "Quit"
+
+[connection signal="pressed" from="CenterContainer/MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed" flags=18]
+[connection signal="pressed" from="CenterContainer/MarginContainer/VBoxContainer/Cheats" to="." method="_on_cheats_pressed" flags=18]
+[connection signal="pressed" from="CenterContainer/MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed" flags=18]

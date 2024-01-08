@@ -1,0 +1,232 @@
+[gd_scene load_steps=21 format=3 uid="uid://bkuurglfehbsy"]
+
+[ext_resource type="Script" path="res://Enemy/Enemy Type 1/EnemyControler.gd" id="1_iap27"]
+[ext_resource type="Material" uid="uid://4whxjxuawc3h" path="res://Textures/EnemyColer.tres" id="4_j0t0s"]
+
+[sub_resource type="CylinderMesh" id="3"]
+material = ExtResource("4_j0t0s")
+height = 3.567
+
+[sub_resource type="CylinderShape3D" id="5"]
+height = 2.34183
+radius = 0.54888
+
+[sub_resource type="SphereShape3D" id="6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5365q"]
+albedo_color = Color(1, 0.576471, 0.517647, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_japu1"]
+albedo_color = Color(1, 0.576471, 0.517647, 1)
+
+[sub_resource type="Animation" id="Animation_1e8u2"]
+resource_name = "DamgeTakenIDLE"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Head/HeadMesh:mesh:material")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("4_j0t0s"), SubResource("StandardMaterial3D_5365q"), ExtResource("4_j0t0s")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BodyMesh:mesh:material")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("4_j0t0s"), SubResource("StandardMaterial3D_japu1"), ExtResource("4_j0t0s")]
+}
+
+[sub_resource type="Animation" id="Animation_oyfyw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Head/HeadMesh:mesh:material")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("4_j0t0s")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BodyMesh:mesh:material")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("4_j0t0s")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5lqfm"]
+_data = {
+"DamgeTakenIDLE": SubResource("Animation_1e8u2"),
+"RESET": SubResource("Animation_oyfyw")
+}
+
+[sub_resource type="Animation" id="Animation_7nnj6"]
+resource_name = "IDLE"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Head/HeadMesh:mesh:material")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("4_j0t0s")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BodyMesh:mesh:material")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("4_j0t0s")]
+}
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yyv7l"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fgw0p"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_0rit4"]
+resource_name = "ALERT"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BodyMesh:mesh:material")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("StandardMaterial3D_yyv7l")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Head/HeadMesh:mesh:material")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("StandardMaterial3D_fgw0p")]
+}
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_66m1m"]
+albedo_color = Color(0.921569, 0.921569, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xrwo6"]
+albedo_color = Color(0.921569, 0.921569, 0, 1)
+
+[sub_resource type="Animation" id="Animation_pp2pk"]
+resource_name = "SUS"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BodyMesh:mesh:material")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("StandardMaterial3D_66m1m")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Head/HeadMesh:mesh:material")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("StandardMaterial3D_xrwo6")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2rdkf"]
+_data = {
+"ALERT": SubResource("Animation_0rit4"),
+"IDLE": SubResource("Animation_7nnj6"),
+"SUS": SubResource("Animation_pp2pk")
+}
+
+[sub_resource type="SphereMesh" id="4"]
+material = ExtResource("4_j0t0s")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_nty37"]
+points = PackedVector3Array(0, 3, 0, 1.08, 0, 0, 0, 0, 1, -1, 0, 0, 0, 0, -1)
+
+[node name="EnemyType1" type="CharacterBody3D" groups=["Enemy"]]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 2.49629, 0)
+script = ExtResource("1_iap27")
+
+[node name="BodyMesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.653223, 0, 0, 0, 1, 0, -0.696, 0)
+mesh = SubResource("3")
+
+[node name="BodyCollider" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.695769, 0)
+shape = SubResource("5")
+
+[node name="HeadCollider" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.979917, 0)
+shape = SubResource("6")
+
+[node name="DamageTaken" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_5lqfm")
+}
+
+[node name="SuspicionTimer" type="Timer" parent="."]
+
+[node name="States" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_2rdkf")
+}
+
+[node name="Head" type="Node3D" parent="."]
+
+[node name="HeadMesh" type="MeshInstance3D" parent="Head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.984125, 0.003)
+mesh = SubResource("4")
+skeleton = NodePath("../..")
+
+[node name="Vision" type="ShapeCast3D" parent="Head"]
+transform = Transform3D(0.707107, -1.28028e-08, 0.707107, -0.707107, -3.09086e-08, 0.707107, 1.28028e-08, -1, -3.09086e-08, 0, 0.963363, 2.32676)
+shape = SubResource("ConvexPolygonShape3D_nty37")
+collision_mask = 2
+debug_shape_custom_color = Color(1, 0, 0, 1)
+
+[connection signal="timeout" from="SuspicionTimer" to="." method="_on_SuspicionTimer_timeout"]

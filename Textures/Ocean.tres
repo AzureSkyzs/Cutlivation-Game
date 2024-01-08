@@ -1,0 +1,5 @@
+[gd_resource type="StreamTexture" format=2]
+
+[resource]
+flags = 3
+load_path = "res://.import/Water.png-69a9a0415cc936f6687437459009f098.stex"

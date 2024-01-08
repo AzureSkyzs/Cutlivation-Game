@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://cmwlqqccthegs"]
+
+[ext_resource type="Script" path="res://wall.gd" id="1_mh1w6"]
+[ext_resource type="Texture2D" uid="uid://cemvun0amx3h2" path="res://Textures/Colered_texture_01.png" id="1_r8yip"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eo4xm"]
+albedo_texture = ExtResource("1_r8yip")
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+texture_filter = 5
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_r7nof"]
+size = Vector3(14, 6, 1)
+
+[node name="Wall" type="RigidBody3D" groups=["Wall"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 11.2065)
+freeze = true
+script = ExtResource("1_mh1w6")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+material_override = SubResource("StandardMaterial3D_eo4xm")
+size = Vector3(14, 6, 1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_r7nof")

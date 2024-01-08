@@ -1,9 +1,14 @@
 res://default_env.tres
-res://FpsBody.tscn
-res://Animations/DamgeTaken.tres
-res://FpsBodyContoller.gd
-res://Main.tscn
-res://BasicBody.tscn
+res://Textures/BulletDecal.tscn
+res://Textures/DarkGrid.tres
+res://Textures/EnemyColer.tres
+res://body.gd
 res://Room.tscn
 res://body.tscn
-res://body.gd
+res://wall.tscn
+res://Textures/BulletDecal.gd
+res://Enemy/Enemy Type 1/EnemyType1.tscn
+res://Enemy/Enemy Type 1/EnemyControler.gd
+res://pause_menu.tscn
+res://pause_menu.gd
+res://wall.gd
