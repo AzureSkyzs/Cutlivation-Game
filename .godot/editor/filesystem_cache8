@@ -1,16 +1,25 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1704701588
+::res://::1704704918
 Aim.tres::Animation::-1::1699418378::0::1::::<><>::
 ARIAL.TTF::FontFile::3816668390026993287::1699434862::1704701856::1::::<><>::
 Arms.glb::PackedScene::3097609766962607255::1704334639::1704334640::1::::<><>::
 arms.tscn::PackedScene::5940277693478667202::1704334854::0::1::::<><>::uid://bkergeoljaeih
-body.gd::GDScript::-1::1704701588::0::1::::<>CharacterBody3D<>::
-body.tscn::PackedScene::1684925050339472459::1704701307::0::1::::<><>::res://body.gd<>uid://bum28ag2s87d0::::res://ARIAL.TTF
-default_env.tres::Environment::6210184074746105912::1704701588::0::1::::<><>::
-pause_menu.tscn::PackedScene::4396049933626407777::1704701588::0::1::::<><>::
-Room.tscn::PackedScene::8873895482703317440::1704701306::0::1::::<><>::uid://brhla0cerwk4e::::res://Textures/DarkGrid.tres<>uid://yagp7vvooty6::::res://body.tscn<>uid://cmwlqqccthegs::::res://wall.tscn<>uid://bkuurglfehbsy::::res://Enemy/Enemy Type 1/EnemyType1.tscn
-wall.tscn::PackedScene::5661221104834567574::1704697016::0::1::::<><>::uid://cemvun0amx3h2::::res://Textures/Colered_texture_01.png
-::res://addons/::1699417615
+body.gd::GDScript::-1::1704703649::0::1::::<>CharacterBody3D<>::
+body.tscn::PackedScene::1684925050339472459::1704703899::0::1::::<><>::res://body.gd<>uid://bum28ag2s87d0::::res://ARIAL.TTF<>uid://bwj38tdmy86un::::res://pause_menu.tscn
+default_env.tres::Environment::6210184074746105912::1704704603::0::1::::<><>::
+pause_menu.gd::GDScript::-1::1704703576::0::1::::<>Control<>::
+pause_menu.tscn::PackedScene::3950914653669370745::1704703900::0::1::::<><>::res://pause_menu.gd<>uid://bum28ag2s87d0::::res://ARIAL.TTF
+wall.gd::GDScript::-1::1704704603::0::1::::<>RigidBody3D<>::
+Room.tscn::PackedScene::8873895482703317440::1704703898::0::1::::<><>::uid://brhla0cerwk4e::::res://Textures/DarkGrid.tres<>uid://yagp7vvooty6::::res://body.tscn<>uid://cmwlqqccthegs::::res://wall.tscn<>uid://bkuurglfehbsy::::res://Enemy/Enemy Type 1/EnemyType1.tscn
+wall.tscn::PackedScene::5661221104834567574::1704704603::0::1::::<><>::res://wall.gd<>uid://cemvun0amx3h2::::res://Textures/Colered_texture_01.png
+::res://addons/::1704704818
+::res://addons/godot-git-plugin/::1704704818
+git_plugin.gdextension::GDExtension::-1::1704704818::0::1::::<><>::
+plugin.cfg::TextFile::-1::1704704818::0::1::::<><>::
+THIRDPARTY.md::TextFile::-1::1704704818::0::1::::<><>::
+::res://addons/godot-git-plugin/linux/::1704704818
+::res://addons/godot-git-plugin/macos/::1704704818
+::res://addons/godot-git-plugin/win64/::1704704818
 ::res://addons/qodot/::1699418386
 icon.png::CompressedTexture2D::7568868272143504041::1699435166::1699418386::1::::<><>::
 plugin.cfg::TextFile::-1::1699435168::0::1::::<><>::
@@ -23,15 +32,18 @@ Pulse.tres::Animation::-1::1704339345::0::1::::<><>::
 Recoil.tres::Animation::-1::1704339345::0::1::::<><>::
 ShotgunReload.tres::Animation::-1::1704339345::0::1::::<><>::
 UnAim.tres::Animation::-1::1704339345::0::1::::<><>::
+::res://Breakable Wall/::1704704918
+BrokenWall.glb::PackedScene::8655930395943811102::1704704918::1704704919::1::::<><>::
+Wall.glb::PackedScene::4306484617806008589::1704704918::1704704919::1::::<><>::
 ::res://Enemy/::1704339311
-::res://Enemy/Enemy Type 1/::1704701307
+::res://Enemy/Enemy Type 1/::1704703899
 EnemyControler.gd::GDScript::-1::1704701306::0::1::::<>CharacterBody3D<>::
-EnemyType1.tscn::PackedScene::3130841705872081752::1704701307::0::1::::<><>::res://Enemy/Enemy Type 1/EnemyControler.gd<>uid://4whxjxuawc3h::::res://Textures/EnemyColer.tres
+EnemyType1.tscn::PackedScene::3130841705872081752::1704703899::0::1::::<><>::res://Enemy/Enemy Type 1/EnemyControler.gd<>uid://4whxjxuawc3h::::res://Textures/EnemyColer.tres
 ::res://Sounds/::1699417615
 OutOfAmmo.tres::AudioStreamWAV::-1::1699418378::0::1::::<><>::
 Pistol.tres::AudioStreamMP3::-1::1699418378::0::1::::<><>::
 ReloadingSound.tres::AudioStreamMP3::-1::1699418378::0::1::::<><>::
-::res://Textures/::1704701307
+::res://Textures/::1704703899
 AgedStoneBrick.png::CompressedTexture2D::2945850953593455380::1704339477::1704339477::1::::<><>::
 AppleRed.tres::StandardMaterial3D::-1::1704339477::0::1::::<><>::
 Barrel.tres::StandardMaterial3D::-1::1704339477::0::1::::<><>::
@@ -42,7 +54,7 @@ BeamBlast.gd::GDScript::-1::1704339477::0::1::::<>Spatial<>::
 Brick.png::CompressedTexture2D::5000420041368566169::1704339477::1704339477::1::::<><>::
 Brick.tres::StandardMaterial3D::-1::1704339477::0::1::::<><>::
 BulletDecal.gd::GDScript::-1::1704629242::0::1::::<>Node3D<>::
-BulletDecal.tscn::PackedScene::5851323114386226554::1704701307::0::1::::<><>::uid://jfgoptjfdxc2::::res://Textures/Bullethole1.png<>res://Textures/BulletDecal.gd
+BulletDecal.tscn::PackedScene::5851323114386226554::1704703899::0::1::::<><>::uid://jfgoptjfdxc2::::res://Textures/Bullethole1.png<>res://Textures/BulletDecal.gd
 Bullethole1.png::CompressedTexture2D::642411602201138819::1704339477::1704339477::1::::<><>::
 Canves.png::CompressedTexture2D::7334615075555636862::1704339477::1704339477::1::::<><>::
 Colered_texture_01.png::CompressedTexture2D::5079680769153877553::1704298763::1704299208::1::::<><>::
